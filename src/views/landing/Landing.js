@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Landing = ({ user }) => {
   const navigate = useNavigate();
 
-  const wordArr = ['sucky', 'sh*tty', 'lazy', 'greedy', 'pests', 'mean', 'lame', 'rude', 'selfish'];
+  const wordArr = ['sucky', 'sh*tty', 'lazy', 'greedy', 'pests', 'mean', 'lame', 'dumb', 'cruel', 'rude', 'selfish'];
 
   return (
     <>
@@ -17,7 +17,7 @@ const Landing = ({ user }) => {
         </HeroContainer>
       </LandingContainer>
       <InfoSection>
-        <h1>Don't get mad, get even!</h1>
+        <h1>"You’ve officially been potatoed. Reflect on your actions."</h1>
         <AnimatedButton onClick={() => navigate("/checkout")}>Customize your potato</AnimatedButton>
       </InfoSection>
       <ImgSection>

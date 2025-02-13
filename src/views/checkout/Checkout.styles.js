@@ -7,3 +7,15 @@ export const Container = styled.div`
   padding: 10px;
   background-color: lavender;
 `
+
+export const Form = styled.form`
+  border: 1px solid black;
+`
+
+export const SectionContainer = styled.div`
+
+`
+
+export const Input = styled.input`
+  border: 1px solid red;
+`
