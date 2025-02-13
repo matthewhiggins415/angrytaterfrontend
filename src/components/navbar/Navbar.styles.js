@@ -12,3 +12,13 @@ export const NavbarContainer = styled.div`
   align-items: center;
   overflow: hidden;
 `
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+`

@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from "react-router-dom";
 import background from "../../assets/taterhero.png";
 import potatoone from '../../assets/potato1.png';

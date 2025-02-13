@@ -1,9 +1,11 @@
 import React from 'react';
-import { NavbarContainer } from './Navbar.styles';
+import { NavbarContainer, StyledLink } from './Navbar.styles';
 
 const Navbar = () => {
   return (
-    <NavbarContainer>angrytaters.com</NavbarContainer>
+    <NavbarContainer>
+      <StyledLink to='/'>angrytaters.com</StyledLink>
+    </NavbarContainer>
   )
 }
 

@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 // views
 import Landing from './views/landing/Landing';
+import Checkout from './views/checkout/Checkout';
 
 // components
 import Navbar from './components/navbar/Navbar';
@@ -26,6 +27,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Landing user={user}/>} />
+        <Route path='/checkout' element={<Checkout user={user}/>} />
       </Routes>
     </Router>
   );
