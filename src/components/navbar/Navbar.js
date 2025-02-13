@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { NavbarContainer } from './Navbar.styles';
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <NavbarContainer>angrytaters.com</NavbarContainer>
   )
 }
 
