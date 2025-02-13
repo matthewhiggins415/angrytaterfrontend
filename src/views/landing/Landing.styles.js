@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import { Link } from "react-router-dom";
 import background from "../../assets/taterhero.png";
 import potatoone from '../../assets/potato1.png';
@@ -62,10 +62,15 @@ export const InfoSection = styled.div`
   width: 100%;
   min-height: 50vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: center;
   background-color: whitesmoke;
+
+  h1 {
+    font-size: 3em;
+    text-align: center;
+  }
 `;
 
 export const ImgSection = styled.div`
@@ -75,7 +80,7 @@ export const ImgSection = styled.div`
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  background-color: rgba(255, 179, 215);
+  background-color: lightblue;
   padding: 15px;
 `
 
@@ -117,3 +122,70 @@ export const ImgThree = styled.div`
   margin: 15px;
   border-radius: 20px;
 `
+
+/* Glow Animation */
+const pulseGlow = keyframes`
+  0% {
+    box-shadow: 0px 0px 10px rgba(255, 87, 51, 0.8);
+  }
+  50% {
+    box-shadow: 0px 0px 20px rgba(255, 87, 51, 1);
+  }
+  100% {
+    box-shadow: 0px 0px 10px rgba(255, 87, 51, 0.8);
+  }
+`;
+
+/* Button Hover Effect */
+const shimmer = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
+export const AnimatedButton = styled.button`
+  background-color: #ff5733;
+  color: white;
+  margin-top: 50px;
+  font-size: 25px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  animation: ${pulseGlow} 1.5s infinite alternate, ${shimmer} 2s infinite ease-in-out;
+
+  &:hover {
+    background-color: #ff2e00;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 25px rgba(255, 87, 51, 1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  /* Cool background shimmer effect */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover::before {
+    left: 100%;
+  }
+`;

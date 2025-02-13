@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { LandingContainer, HeroContainer, HeroTag, HeroBtn, InfoSection, ImgSection, ImgOne, ImgTwo, ImgThree } from './Landing.styles';
+import { LandingContainer, HeroContainer, HeroTag, HeroBtn, InfoSection, ImgSection, ImgOne, ImgTwo, ImgThree, AnimatedButton } from './Landing.styles';
 import WordChanger from '../../components/wordChanger/WordChanger';
 
 
@@ -15,10 +15,8 @@ const Landing = () => {
         </HeroContainer>
       </LandingContainer>
       <InfoSection>
-        <div>
-          <h1>Add a custom message to your potato</h1>
-          <button>Customize your potato</button>
-        </div>
+        <h1>Don't get mad, get even!</h1>
+        <AnimatedButton>Customize your potato</AnimatedButton>
       </InfoSection>
       <ImgSection>
         <ImgOne></ImgOne>
