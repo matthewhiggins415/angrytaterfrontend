@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Form, Input, SectionContainer } from './Checkout.styles';
+import { Container, Form, Input, SectionContainer, TextArea, ImgContainer, SubmitBtn } from './Checkout.styles';
 
 const Checkout = ({ user }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -13,7 +13,6 @@ const Checkout = ({ user }) => {
     recipient_city: '',
     recipient_zip: '',
     recipient_country: '',
-    date: '',
     message: ''
   })
 
@@ -32,16 +31,90 @@ const Checkout = ({ user }) => {
 
   return (
     <Container> 
+      <ImgContainer>
+        
+      </ImgContainer>
       <Form onSubmit={handleSubmit}>
         <SectionContainer>
+          <p>Your information</p>
           <Input 
-            name="name"  /* Changed from "title" to "name" to match formData */
+            name="name" 
             type="text" 
-            value={formData.name} /* Updated to formData.name */
-            placeholder="Enter your name" 
+            value={formData.name} 
+            placeholder="enter your name" 
+            onChange={onChange}
+          />
+          <Input 
+            name="email"  
+            type="email" 
+            value={formData.email} 
+            placeholder="enter your email" 
             onChange={onChange}
           />
         </SectionContainer>
+        <SectionContainer>
+          <p>Recipient information</p>
+          <Input 
+            name="recipient_name"  
+            type="text" 
+            value={formData.recipient_name} 
+            placeholder="recipient's name" 
+            onChange={onChange}
+          />
+          <Input 
+            name="recipient_business_name"  
+            type="text" 
+            value={formData.recipient_business_name} 
+            placeholder="business name (optional)" 
+            onChange={onChange}
+          />
+          <Input 
+            name="recipient_address"  
+            type="text" 
+            value={formData.recipient_address} 
+            placeholder="street address" 
+            onChange={onChange}
+          />
+          <Input 
+            name="recipient_unit"  
+            type="text" 
+            value={formData.recipient_unit} 
+            placeholder="unit # (optional)" 
+            onChange={onChange}
+          />
+          <Input 
+            name="recipient_city"  
+            type="text" 
+            value={formData.recipient_city} 
+            placeholder="city" 
+            onChange={onChange}
+          />
+          <Input 
+            name="recipient_zip"  
+            type="text" 
+            value={formData.recipient_zip} 
+            placeholder="zip code" 
+            onChange={onChange}
+          />
+          <Input 
+            name="recipient_country"  
+            type="text" 
+            value={formData.recipient_country} 
+            placeholder="country" 
+            onChange={onChange}
+          />
+        </SectionContainer>
+        <SectionContainer>
+          <p>Your custom message</p>
+          <TextArea
+            name="message"  
+            type="textarea" 
+            value={formData.message} 
+            placeholder="message on your potato" 
+            onChange={onChange}
+          />
+        </SectionContainer>
+        <SubmitBtn>submit</SubmitBtn>
       </Form>
     </Container>
   );
