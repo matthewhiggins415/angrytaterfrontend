@@ -36,8 +36,9 @@ export const HeroTag = styled.h1`
 `
 
 export const HeroBtn = styled.button`
-  width: 200px;
-  height: 100px;
+  width: auto;
+  height: auto;
+  padding: 20px 30px;
   border: 3px solid white;
   cursor: pointer;
   margin-top: 30px;

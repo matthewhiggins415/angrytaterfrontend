@@ -13,12 +13,12 @@ const Landing = ({ user }) => {
       <LandingContainer>
         <HeroContainer>
           <HeroTag>Some people are <WordChanger words={wordArr}/> and they should know it.</HeroTag>
-          <HeroBtn onClick={() => navigate("/checkout")}>send potato</HeroBtn>
+          <HeroBtn onClick={() => navigate("/checkout")}>send potato $20</HeroBtn>
         </HeroContainer>
       </LandingContainer>
       <InfoSection>
         <h1>"You’ve officially been potatoed. Reflect on your actions."</h1>
-        <AnimatedButton onClick={() => navigate("/checkout")}>Customize your potato</AnimatedButton>
+        <AnimatedButton onClick={() => navigate("/checkout")}>Customize your potato $20</AnimatedButton>
       </InfoSection>
       <ImgSection>
         <ImgOne></ImgOne>
