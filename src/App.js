@@ -1,11 +1,12 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 // views
 import Landing from './views/landing/Landing';
-import Checkout from './views/checkout/Checkout';
+import CheckoutForm from './views/checkout/Checkout';
+import { Return } from './views/return/Return';
 
 // components
 import Navbar from './components/navbar/Navbar';
@@ -15,9 +16,10 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate
 } from "react-router-dom";
 
-function App() {
+export const App = () => {
   const [user, setUser] = useState({});
 
   return (
@@ -27,7 +29,8 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Landing user={user}/>} />
-        <Route path='/checkout' element={<Checkout user={user}/>} />
+        <Route path="/checkout" element={<CheckoutForm />} />
+        <Route path="/return" element={<Return />} />
       </Routes>
     </Router>
   );
