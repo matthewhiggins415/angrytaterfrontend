@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 
-export const Return = () => {
+export const Return = (order) => {
     const [status, setStatus] = useState(null);
     const [customerEmail, setCustomerEmail] = useState('');
+
+    console.log('Order:', order)
   
     useEffect(() => {
       const queryString = window.location.search;
@@ -18,6 +20,8 @@ export const Return = () => {
           setCustomerEmail(data.customer_email);
         });
     }, []);
+
+    console.log("order", order)
   
     if (status === 'open') {
       return (
@@ -32,6 +36,8 @@ export const Return = () => {
             We appreciate your business! A confirmation email will be sent to {customerEmail}.
   
             If you have any questions, please email <a href="mailto:orders@example.com">orders@example.com</a>.
+
+            <a>{order.recipient_business_name}</a>
           </p>
         </section>
       )

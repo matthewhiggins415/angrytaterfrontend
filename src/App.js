@@ -7,6 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import Landing from './views/landing/Landing';
 import CheckoutForm from './views/checkout/Checkout';
 import { Return } from './views/return/Return';
+import OrderInfo from './views/orderinfo/OrderInfo';
+import Login from './views/login/Login';
 
 // components
 import Navbar from './components/navbar/Navbar';
@@ -21,6 +23,9 @@ import {
 
 export const App = () => {
   const [user, setUser] = useState({});
+  const [order, setOrder] = useState({});
+
+  console.log("order:", order)
 
   return (
     <Router>
@@ -28,9 +33,11 @@ export const App = () => {
       <ToastContainer theme="light" position="top-left" autoClose={1200}/>
 
       <Routes>
-        <Route path='/' element={<Landing user={user}/>} />
+        <Route path="/" element={<Landing user={user} />} />
+        <Route path="/order" element={<OrderInfo user={user} setOrder={setOrder} />} />
         <Route path="/checkout" element={<CheckoutForm />} />
-        <Route path="/return" element={<Return />} />
+        <Route path="/return" element={<Return order={order} />} />
+        <Route path="/login" element={<Login user={user} setUser={setUser} />}  />
       </Routes>
     </Router>
   );

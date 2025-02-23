@@ -22,3 +22,12 @@ export const StyledLink = styled(Link)`
   display: inline-block;
   transition: all 0.3s ease-in-out;
 `
+
+export const LoginLink = styled(Link)`
+  color: black;
+  font-size: 18px;
+  padding: 10px;
+  position: absolute;
+  right: 0px;
+  text-decoration: none;
+`

@@ -81,7 +81,7 @@ export const ImgSection = styled.div`
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  background-color: lightblue;
+  background-color: #47fff9;
   padding: 15px;
 `
 
@@ -90,7 +90,7 @@ export const ImgOne = styled.div`
   background-size: max(400px, 300px);
   background-position: center -150px;
   background-repeat: no-repeat;
-  background-color: rgba(255, 182, 65, 0.8);
+  background-color: #fc6ffc;
   width: 400px;
   height: 300px;
   border: 3px solid black;
@@ -116,7 +116,7 @@ export const ImgThree = styled.div`
   background-size: max(400px, 300px);
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgba(244, 255, 35, 0.8);
+  background-color: #80fc6f;
   width: 400px;
   height: 300px;
   border: 3px solid black;
