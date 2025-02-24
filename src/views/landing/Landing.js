@@ -12,12 +12,12 @@ const Landing = ({ user }) => {
     <>
       <LandingContainer>
         <HeroContainer>
-          <HeroTag>Some people are <WordChanger words={wordArr}/> and they should know it.</HeroTag>
+          <HeroTag>Some people are <WordChanger words={wordArr}/> and they should be f*cked with.</HeroTag>
           <HeroBtn onClick={() => navigate("/order")}>send potato $20</HeroBtn>
         </HeroContainer>
       </LandingContainer>
       <InfoSection>
-        <h1>Is this dumb? Yes. Is this valuable in any way? Not really. </h1>
+        <h1>Is this dumb? Yes. Does this make me feel better? Kinda. </h1>
         <AnimatedButton onClick={() => navigate("/order")}>Customize your potato $20</AnimatedButton>
       </InfoSection>
       <ImgSection>

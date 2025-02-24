@@ -6,8 +6,8 @@ import { signIn } from '../../api/user';
 const Login = ({ user, setUser }) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    user_email: '',
-    user_pw: ''
+    email: '',
+    password: ''
   })
   
   const onChange = (e) => {
@@ -43,17 +43,17 @@ const Login = ({ user, setUser }) => {
     <ScreenContainer>
       <Form onSubmit={handleSubmit}>
         <Input 
-          name="user_email"  
+          name="email"  
           type="email" 
-          value={formData.user_email} 
+          value={formData.email} 
           placeholder="user email" 
           onChange={onChange}
           required='true'
         />
         <Input 
-          name="user_pw"  
+          name="password"  
           type="text" 
-          value={formData.user_pw} 
+          value={formData.password} 
           placeholder="user password" 
           onChange={onChange}
           required='true'
