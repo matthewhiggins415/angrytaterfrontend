@@ -39,7 +39,7 @@ const OrderInfo = ({ user, setOrder }) => {
       </ImgContainer>
       <Form onSubmit={handleSubmit}>
         <SectionContainer>
-          <p>Recipient Information</p>
+          <p>Potato Recipient Info</p>
           <Input 
             name="recipient_business_name"  
             type="text" 

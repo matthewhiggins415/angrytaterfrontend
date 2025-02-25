@@ -12,7 +12,7 @@ const Landing = ({ user }) => {
     <>
       <LandingContainer>
         <HeroContainer>
-          <HeroTag>Some people are <WordChanger words={wordArr}/> and they should be f*cked with.</HeroTag>
+          <HeroTag>Some people are <WordChanger words={wordArr}/> and they should know it.</HeroTag>
           <HeroBtn onClick={() => navigate("/order")}>send potato $20</HeroBtn>
         </HeroContainer>
       </LandingContainer>
