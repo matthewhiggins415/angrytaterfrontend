@@ -3,6 +3,7 @@ import {
   EmbeddedCheckoutProvider,
   EmbeddedCheckout
 } from '@stripe/react-stripe-js';
+import apiUrl from '../../apiConfig';
 import React, { useCallback, useState, useEffect } from "react";
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_TEST_KEY);
 
@@ -12,7 +13,7 @@ const CheckoutForm = () => {
 
   const fetchClientSecret = useCallback(() => {
     // Create a Checkout Session
-    return fetch(`${process.env.REACT_APP_BACKEND_URL}/create-checkout-session`, {
+    return fetch(`${apiUrl}/create-checkout-session`, {
       method: "POST",
       body: JSON.stringify({
         sessionData: parsedData, // Send session storage data

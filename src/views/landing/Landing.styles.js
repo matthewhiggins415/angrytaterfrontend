@@ -20,6 +20,20 @@ export const LandingContainer = styled.div`
   animation: wavey 3s infinite ease-in-out;
   position: relative;
   z-index: 1;
+
+  /* Responsive styles for mobile */
+  @media (max-width: 768px) {
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: top; /* Adjusts positioning */
+    min-height: 60vh; /* Reduce height for smaller screens */
+    padding: 20px; /* Adds padding for spacing */
+  }
+
+  @media (max-width: 480px) {
+    background-size: cover; /* Adjust for very small screens */
+    min-height: 50vh; /* Reduce height further */
+    padding: 15px;
+  }
 `;
 
 export const HeroContainer = styled.div`
@@ -67,6 +81,7 @@ export const InfoSection = styled.div`
   align-items: center;
   justify-content: center;
   background-color: whitesmoke;
+  padding: 20px;
 
   h1 {
     font-size: 3em;
@@ -77,6 +92,7 @@ export const InfoSection = styled.div`
 export const ImgSection = styled.div`
   width: 100%;
   min-height: 50vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

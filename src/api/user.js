@@ -4,7 +4,7 @@ import apiUrl from '../apiConfig.js'
 //login
 export const signIn = (data) => {
   let { email, password } = data;
-  return axios.post("http://localhost:5000" + '/login', {
+  return axios.post(apiUrl + '/login', {
     credentials: {
       email,
       password

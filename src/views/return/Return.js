@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
+import apiUrl from '../../apiConfig';
 
 export const Return = (order) => {
     const [status, setStatus] = useState(null);
@@ -12,7 +13,7 @@ export const Return = (order) => {
       const urlParams = new URLSearchParams(queryString);
       const sessionId = urlParams.get('session_id');
   
-      fetch(`http://localhost:5000/session-status?session_id=${sessionId}`)
+      fetch(`${apiUrl}/session-status?session_id=${sessionId}`)
         .then((res) => res.json())
         .then((data) => {
           console.log(data)
