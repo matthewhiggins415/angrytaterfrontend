@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
-import boxImg from '../../assets/box.jpg'
+import boxImg from '../../assets/box.jpg';
+import hotPotato from '../../assets/hotpotato.jpg';
 
 export const Container = styled.div`
   width: 100%;
@@ -69,16 +70,11 @@ export const TextArea = styled.textarea`
   background-color: #fcfffd;
 `
 export const ImgContainer = styled.div`  
-  background-image: url(${boxImg});
-  background-size: max(200px, 350px);
+  background-image: url(${hotPotato});
   background-position: center;
   width: 500px;
   height: 400px;
-  border-radius: 20px;
-  border: 4px solid white;
-  background-color: #c4ffd1;
   background-repeat: no-repeat;
-  margin-top: 20px;
 `
 export const SubmitBtn = styled.button`
   width: 80%;
