@@ -4,6 +4,7 @@ import background from "../../assets/taterhero.png";
 import potatoone from '../../assets/potato1.png';
 import potatotwo from '../../assets/potato2.png';
 import potatothree from '../../assets/potato3.png';
+import potatobox from '../../assets/potato_box.png';
 
 export const LandingContainer = styled.div`
   background-image: url(${background});
@@ -205,4 +206,13 @@ export const AnimatedButton = styled.button`
   &:hover::before {
     left: 100%;
   }
+`;
+
+export const PotatoBoxSection = styled.div`
+  width: 100%;
+  height: 60vh;
+  background-image: url(${potatobox});
+  background-size: max(20vw, 300px);
+  background-position: top;
+  background-repeat: no-repeat;
 `;
