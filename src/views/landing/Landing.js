@@ -18,6 +18,8 @@ const Landing = ({ user }) => {
       </LandingContainer>
       <InfoSection>
         <h1>Is this dumb? Absolutely. Will it solve your problems? No. But will it mildly confuse your nemesis? 100%.</h1>
+        <PotatoBoxSection>
+        </PotatoBoxSection>
         <AnimatedButton onClick={() => navigate("/order")}>Customize your potato $20</AnimatedButton>
       </InfoSection>
       <ImgSection>
@@ -25,9 +27,6 @@ const Landing = ({ user }) => {
         <ImgTwo></ImgTwo>
         <ImgThree></ImgThree>
       </ImgSection>
-      <PotatoBoxSection>
-
-      </PotatoBoxSection>
     </>
   )
 }

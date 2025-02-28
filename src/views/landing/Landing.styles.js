@@ -210,9 +210,10 @@ export const AnimatedButton = styled.button`
 
 export const PotatoBoxSection = styled.div`
   width: 100%;
-  height: 60vh;
+  height: 45vh;
   background-image: url(${potatobox});
-  background-size: max(20vw, 300px);
-  background-position: top;
+  background-size: max(400px, 300px);
+  background-position: center;
   background-repeat: no-repeat;
+  /* transform: translateY(-50px); Moves the section up by 20px */
 `;

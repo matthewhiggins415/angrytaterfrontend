@@ -10,6 +10,7 @@ import { Return } from './views/return/Return';
 import OrderInfo from './views/orderinfo/OrderInfo';
 import Login from './views/login/Login';
 import Orders from './views/orders/Orders';
+import OrderDetails from './views/orderdetails/OrderDetails';
 
 // components
 import Navbar from './components/navbar/Navbar';
@@ -40,6 +41,7 @@ export const App = () => {
         <Route path="/return" element={<Return order={order} />} />
         <Route path="/login" element={<Login user={user} setUser={setUser} />}  />
         <Route path="/orders" element={<Orders user={user} setUser={setUser} />}  />
+        <Route path="/orders/:id" element={<OrderDetails user={user} setUser={setUser} />} /> 
       </Routes>
     </Router>
   );

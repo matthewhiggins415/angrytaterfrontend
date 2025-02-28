@@ -25,7 +25,23 @@ export const createOrder = (data) => {
 }
 
 // get all orders
+export const getOrders = (user) => {
+  return axios.get(apiUrl + `/orders`, {
+    headers: {
+      Authorization: `Bearer ${user.token}`
+    }
+  })
+}
 
 // get a single order 
+export const getAnOrder = (user, id) => {
+  console.log("user from getAnOrder", user)
+  return axios.get(apiUrl + `/orders/${id}`, {
+    headers: {
+      Authorization: `Bearer ${user.token}`
+    }
+  })
+}
+  
 
 // update an order as sent 

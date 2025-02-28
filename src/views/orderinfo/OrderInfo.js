@@ -26,7 +26,7 @@ const OrderInfo = ({ user, setOrder }) => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    // console.log("Form submitted:", formData);
     setOrder(formData);
     sessionStorage.setItem("orderInfo", JSON.stringify(formData));
     navigate('/checkout');

@@ -18,7 +18,6 @@ export const Return = (order) => {
     fetch(`${apiUrl}/session-status?session_id=${sessionId}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log("stripe data:", data)
         setStatus(data.status);
         setCustomerEmail(data.customer_email);
     });
@@ -37,7 +36,6 @@ export const Return = (order) => {
       const createTheOrder = async () => {
         try {
           const res = await createOrder(updatedOrderInfo);
-          console.log("res", res)
         } catch (error) {
           console.log(error);
         }
@@ -60,7 +58,7 @@ export const Return = (order) => {
       <ReturnSection id="success">
         <p>Thank you for your business and unwavering spite.</p> 
         <p>A confirmation email will be sent to {customerEmail}.</p>
-        <p>If you have any questions, please email <a href="mailto:orders@example.com">mhiggins.louis@gmail.com</a>.</p>
+        <p>If you have any questions, please email <a href="mailto:mhiggins.louis@gmail.com">mhiggins.louis@gmail.com</a>.</p>
         <a>{order.recipient_business_name}</a>
         <HomeBtn onClick={() => navigate("/")}>back to home</HomeBtn>
 
