@@ -46,7 +46,7 @@ const OrderInfo = ({ user, setOrder }) => {
             value={formData.recipient_business_name} 
             placeholder="business name (optional)" 
             onChange={onChange}
-            required='false'
+            required={false}
           />
           <Input 
             name="recipient_name"  
@@ -54,7 +54,7 @@ const OrderInfo = ({ user, setOrder }) => {
             value={formData.recipient_name} 
             placeholder="recipient's name" 
             onChange={onChange}
-            required="false"
+            required={false}
           />
           <Input 
             name="recipient_address"  
@@ -62,7 +62,7 @@ const OrderInfo = ({ user, setOrder }) => {
             value={formData.recipient_address} 
             placeholder="street address" 
             onChange={onChange}
-            required='true'
+            required={true}
           />
           <Input 
             name="recipient_unit"  
@@ -70,7 +70,7 @@ const OrderInfo = ({ user, setOrder }) => {
             value={formData.recipient_unit} 
             placeholder="unit # (optional)" 
             onChange={onChange}
-            require="false"
+            required={false}
           />
           <Input 
             name="recipient_city"  
@@ -78,7 +78,7 @@ const OrderInfo = ({ user, setOrder }) => {
             value={formData.recipient_city} 
             placeholder="city" 
             onChange={onChange}
-            required='true'
+            required={true}
           />
           <Input 
             name="recipient_zip"  
@@ -86,7 +86,7 @@ const OrderInfo = ({ user, setOrder }) => {
             value={formData.recipient_zip} 
             placeholder="zip code" 
             onChange={onChange}
-            required="true"
+            required={true}
           />
           <Input 
             name="recipient_state"  
@@ -94,7 +94,7 @@ const OrderInfo = ({ user, setOrder }) => {
             value={formData.recipient_state} 
             placeholder="state" 
             onChange={onChange}
-            required="true"
+            required={true}
           />
           <Input 
             name="recipient_country"  
@@ -102,7 +102,7 @@ const OrderInfo = ({ user, setOrder }) => {
             value={formData.recipient_country} 
             placeholder="country" 
             onChange={onChange}
-            required="true"
+            required={true}
           />
         </SectionContainer>
         <SectionContainer>
@@ -113,6 +113,7 @@ const OrderInfo = ({ user, setOrder }) => {
             value={formData.message} 
             placeholder="message on your potato" 
             onChange={onChange}
+            required={true}
           />
         </SectionContainer>
         <SubmitBtn type="submit">Submit</SubmitBtn>

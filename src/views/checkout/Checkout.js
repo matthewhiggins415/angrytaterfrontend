@@ -5,7 +5,8 @@ import {
 } from '@stripe/react-stripe-js';
 import apiUrl from '../../apiConfig';
 import React, { useCallback, useState, useEffect } from "react";
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+
+const stripePromise = loadStripe('pk_test_51QsVuIIz1XZR8bQ2bKMH5l9Ehts5mwusAk79wDC4o3ILuhqRubSht8dQfPizoXJLH1tKUOAoi28BdFWW9pcJh0Qt00MBOgngZ3');
 
 const CheckoutForm = () => {
   const sessionData = sessionStorage.getItem('orderInfo'); // Retrieve stored data
