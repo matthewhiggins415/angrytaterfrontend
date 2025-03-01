@@ -6,7 +6,7 @@ import {
 import apiUrl from '../../apiConfig';
 import React, { useCallback, useState, useEffect } from "react";
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY_TEST);
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY_LIVE);
 
 const CheckoutForm = () => {
   const sessionData = sessionStorage.getItem('orderInfo'); // Retrieve stored data
