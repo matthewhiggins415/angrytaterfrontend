@@ -58,7 +58,7 @@ export const Return = (order) => {
       <ReturnSection id="success">
         <p>Thank you for your business and unwavering spite.</p> 
         <p>A confirmation email will be sent to {customerEmail}.</p>
-        <p>If you have any questions, please email <a href="mailto:mhiggins.louis@gmail.com">mhiggins.louis@gmail.com</a>.</p>
+        <p>If you have any questions, please email <a href="mailto:angrytaters@gmail.com">angrytaters@gmail.com</a>.</p>
         <a>{order.recipient_business_name}</a>
         <HomeBtn onClick={() => navigate("/")}>back to home</HomeBtn>
 
