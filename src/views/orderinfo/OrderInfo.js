@@ -111,7 +111,7 @@ const OrderInfo = ({ user, setOrder }) => {
             name="message"  
             type="textarea" 
             value={formData.message} 
-            placeholder="message on your potato" 
+            placeholder="message on your potato & special instructions if needed." 
             onChange={onChange}
             required={true}
           />

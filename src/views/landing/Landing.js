@@ -17,7 +17,11 @@ const Landing = ({ user }) => {
         </HeroContainer>
       </LandingContainer>
       <InfoSection>
-        <h1>Is this dumb? Absolutely. Will it solve your problems? No. But will it mildly confuse your nemesis? 100%.</h1>
+        <h1>
+         Anonymous? Yes. <br />
+         Is this dumb? Absolutely. <br />
+         Will it solve your problems? No. <br />
+         Mildly confuse your nemesis? 100%.</h1>
         <PotatoBoxSection>
         </PotatoBoxSection>
         <AnimatedButton onClick={() => navigate("/order")}>Customize your potato $20</AnimatedButton>
