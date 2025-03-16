@@ -5,6 +5,7 @@ import potatoone from '../../assets/potato1.png';
 import potatotwo from '../../assets/potato2.png';
 import potatothree from '../../assets/potato3.png';
 import potatobox from '../../assets/potato_box.png';
+import potatomeme from '../../assets/potatomeme.jpg';
 
 export const LandingContainer = styled.div`
   background-image: url(${background});
@@ -216,4 +217,12 @@ export const PotatoBoxSection = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   /* transform: translateY(-50px); Moves the section up by 20px */
+`;
+
+export const PotatoMemeSection = styled.div`
+  width: 100%;
+  min-height: 500px;
+  background-image: url(${potatomeme});
+  background-position: center;
+  background-repeat: no-repeat;
 `;

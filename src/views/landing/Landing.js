@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { LandingContainer, HeroContainer, HeroTag, HeroBtn, InfoSection, ImgSection, ImgOne, ImgTwo, ImgThree, AnimatedButton, PotatoBoxSection } from './Landing.styles';
+import { LandingContainer, HeroContainer, HeroTag, HeroBtn, InfoSection, ImgSection, ImgOne, ImgTwo, ImgThree, AnimatedButton, PotatoBoxSection, PotatoMemeSection } from './Landing.styles';
 import WordChanger from '../../components/wordChanger/WordChanger';
 import { useNavigate } from "react-router-dom";
 
@@ -25,6 +25,7 @@ const Landing = ({ user }) => {
         <PotatoBoxSection>
         </PotatoBoxSection>
         <AnimatedButton onClick={() => navigate("/order")}>Customize your potato $20</AnimatedButton>
+        <PotatoMemeSection></PotatoMemeSection>
       </InfoSection>
       <ImgSection>
         <ImgOne></ImgOne>
