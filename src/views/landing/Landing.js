@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { LandingContainer, HeroContainer, HeroTag, HeroBtn, InfoSection, ImgSection, ImgOne, ImgTwo, ImgThree, AnimatedButton, PotatoBoxSection, PotatoMemeSection } from './Landing.styles';
 import WordChanger from '../../components/wordChanger/WordChanger';
 import { useNavigate } from "react-router-dom";
@@ -7,6 +7,10 @@ const Landing = ({ user }) => {
   const navigate = useNavigate();
 
   const wordArr = ['sucky', 'sh*tty', 'lazy', 'greedy', 'pests', 'mean', 'lame', 'dumb', 'cruel', 'rude', 'selfish'];
+
+  useEffect(() => {
+    sessionStorage.clear();
+  }, []);
 
   return (
     <>
