@@ -226,3 +226,7 @@ export const PotatoMemeSection = styled.div`
   background-position: center;
   background-repeat: no-repeat;
 `;
+
+export const Span = styled.span`
+  color: red;
+`
