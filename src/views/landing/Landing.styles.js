@@ -204,7 +204,7 @@ export const AnimatedButton = styled.button`
   /* Mobile: fixed to bottom of screen */
   @media (max-width: 768px) {
     position: fixed;
-    bottom: 250px;
+    bottom: 50px;
     left: 5%;
     transform: translateX(-50%);
     width: 90%;
