@@ -27,7 +27,7 @@ export const LandingContainer = styled.div`
   @media (max-width: 768px) {
     background-size: cover; /* Ensures the image covers the entire background */
     background-position: top; /* Adjusts positioning */
-    min-height: 60vh; /* Reduce height for smaller screens */
+    max-height: 60vh; /* Reduce height for smaller screens */
     padding: 20px; /* Adds padding for spacing */
   }
 
@@ -49,32 +49,12 @@ export const HeroTag = styled.h1`
   color: black;
   font-size: 100px;
   text-align: center;
-`
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 
-export const HeroBtn = styled.button`
-  width: auto;
-  height: auto;
-  padding: 20px 30px;
-  border: 3px solid white;
-  cursor: pointer;
-  margin-top: 30px;
-  margin: 50px auto;
-  font-size: 25px;
-  color: white;
-  border-radius: 20px;
-  background-color: transparent;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  transition: ease-in-out 150ms;
-  font-weight: 600;
-
-  &:hover {
-    background-color: rgba(255, 215, 42);
-    color: black;
-    transform: scale(1.05);
-    border: none;
+  @media (max-width: 768px) {
+    font-size: 2.5em;
   }
 `
-
 export const InfoSection = styled.div`
   width: 100%;
   min-height: 50vh;
@@ -83,11 +63,19 @@ export const InfoSection = styled.div`
   align-items: center;
   justify-content: center;
   background-color: whitesmoke;
-  padding: 20px;
 
   h1 {
     font-size: 3em;
     text-align: center;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2em;
+      margin-top: 20px;
+    }
   }
 `;
 
@@ -171,9 +159,8 @@ const shimmer = keyframes`
 export const AnimatedButton = styled.button`
   background-color: #ff5733;
   color: white;
-  margin-top: 50px;
-  font-size: 25px;
-  padding: 15px 30px;
+  font-size: 50px;
+  padding: 30px 60px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -181,6 +168,13 @@ export const AnimatedButton = styled.button`
   position: relative;
   overflow: hidden;
   animation: ${pulseGlow} 1.5s infinite alternate, ${shimmer} 2s infinite ease-in-out;
+  position: fixed;
+  bottom: 550px;
+  left: 25%;
+  transform: translateX(-50%);
+  width: auto;
+  margin: 0;
+  z-index: 9999;
 
   &:hover {
     background-color: #ff2e00;
@@ -192,7 +186,6 @@ export const AnimatedButton = styled.button`
     transform: scale(0.95);
   }
 
-  /* Cool background shimmer effect */
   &::before {
     content: "";
     position: absolute;
@@ -206,6 +199,21 @@ export const AnimatedButton = styled.button`
 
   &:hover::before {
     left: 100%;
+  }
+
+  /* Mobile: fixed to bottom of screen */
+  @media (max-width: 768px) {
+    position: fixed;
+    bottom: 250px;
+    left: 5%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    margin: 0;
+    z-index: 9999;
+    font-size: 30px;
+    padding: 15px 30px;
+
   }
 `;
 

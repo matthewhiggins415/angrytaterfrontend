@@ -75,6 +75,12 @@ export const ImgContainer = styled.div`
   width: 500px;
   height: 400px;
   background-repeat: no-repeat;
+
+  @media (max-width: 768px) {
+    width: 95%;
+    background-size: contain;
+    height: 220px;
+}
 `
 export const SubmitBtn = styled.button`
   width: 80%;
