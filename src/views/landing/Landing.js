@@ -26,10 +26,9 @@ const Landing = ({ user }) => {
         <PotatoBoxSection>
         </PotatoBoxSection>
         <h1>
-         Anonymous? <Span>If you want.</Span> <br />
-         Is this dumb? <Span>Absolutely.</Span> <br />
-         {/* Solve ur problems? <Span>No.</Span> <br />
-         Confuse ur foes? <Span>100%.</Span> </h1> */}
+         Anonymous? <Span>If you want.</Span> <br/>
+         Who doesn't want a potato in the mail?! <br />
+         For friends or foes, they won't expect it!
         </h1>
       </InfoSection>
       <ImgSection>
