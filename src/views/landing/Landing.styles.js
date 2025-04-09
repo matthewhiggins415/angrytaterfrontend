@@ -43,16 +43,22 @@ export const HeroContainer = styled.div`
   height: auto;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 export const HeroTag = styled.h1`
   color: black;
   font-size: 100px;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  /* text-shadow: 2px 3px 4px rgba(255, 255, 255, 0.9); */
+  /* border: 2px solid red; */
 
   @media (max-width: 768px) {
-    font-size: 2.5em;
+    font-size: 3em;
+    width: 100%;
   }
 `
 export const InfoSection = styled.div`
@@ -159,7 +165,7 @@ const shimmer = keyframes`
 export const AnimatedButton = styled.button`
   background-color: #ff5733;
   color: white;
-  font-size: 50px;
+  font-size: 40px;
   padding: 30px 60px;
   border: none;
   border-radius: 10px;
@@ -168,13 +174,11 @@ export const AnimatedButton = styled.button`
   position: relative;
   overflow: hidden;
   animation: ${pulseGlow} 1.5s infinite alternate, ${shimmer} 2s infinite ease-in-out;
-  position: fixed;
-  bottom: 550px;
-  left: 25%;
-  transform: translateX(-50%);
   width: auto;
-  margin: 0;
-  z-index: 9999;
+  margin: 0 auto;
+  display: block;
+  z-index: 1;
+  margin-bottom: 20px;
 
   &:hover {
     background-color: #ff2e00;
@@ -201,19 +205,12 @@ export const AnimatedButton = styled.button`
     left: 100%;
   }
 
-  /* Mobile: fixed to bottom of screen */
+  /* Optional: Responsive tweaks for smaller screens */
   @media (max-width: 768px) {
-    position: fixed;
-    bottom: 50px;
-    left: 5%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 400px;
-    margin: 0;
-    z-index: 9999;
     font-size: 30px;
     padding: 15px 30px;
-
+    width: 90%;
+    max-width: 400px;
   }
 `;
 

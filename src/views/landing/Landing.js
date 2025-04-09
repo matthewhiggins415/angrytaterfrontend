@@ -16,25 +16,27 @@ const Landing = ({ user }) => {
     <>
       <LandingContainer>
         <HeroContainer>
-          <HeroTag>Some people are <WordChanger words={wordArr}/> and they should know it.</HeroTag>
+          {/* <HeroTag>Some people are <WordChanger words={wordArr}/> and they should know it.</HeroTag> */}
+          <HeroTag>Because some messages are better sent with a root vegetable.</HeroTag>
         </HeroContainer>
+        {/* <AnimatedButton onClick={() => navigate("/order")}>Customize your potato $20</AnimatedButton> */}
       </LandingContainer>
-      <AnimatedButton onClick={() => navigate("/order")}>Customize your potato $20</AnimatedButton>
       <InfoSection>
+        <AnimatedButton onClick={() => navigate("/order")}>Customize your potato $20</AnimatedButton>
+        <PotatoBoxSection>
+        </PotatoBoxSection>
         <h1>
          Anonymous? <Span>Yes.</Span> <br />
          Is this dumb? <Span>Absolutely.</Span> <br />
          Solve ur problems? <Span>No.</Span> <br />
          Confuse ur foes? <Span>100%.</Span> </h1>
-        <PotatoBoxSection>
-        </PotatoBoxSection>
-        {/* <AnimatedButton onClick={() => navigate("/order")}>Customize your potato $20</AnimatedButton> */}
       </InfoSection>
       <ImgSection>
         <ImgOne></ImgOne>
         <ImgTwo></ImgTwo>
         <ImgThree></ImgThree>
       </ImgSection>
+      <AnimatedButton onClick={() => navigate("/order")}>Customize your potato $20</AnimatedButton>
       <PotatoMemeSection></PotatoMemeSection>
     </>
   )
