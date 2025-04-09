@@ -53,7 +53,7 @@ export const HeroTag = styled.h1`
   color: black;
   font-size: 100px;
   text-align: center;
-  /* text-shadow: 2px 3px 4px rgba(255, 255, 255, 0.9); */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
   /* border: 2px solid red; */
 
   @media (max-width: 768px) {
