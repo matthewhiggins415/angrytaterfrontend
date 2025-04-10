@@ -7,6 +7,12 @@ export const ReturnSection = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 3rem 1.5rem;
+    gap: 1.5rem; /* add spacing between children if needed */
+  }
 `
 
 export const HomeBtn = styled.button`
