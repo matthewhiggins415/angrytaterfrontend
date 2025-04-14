@@ -46,6 +46,15 @@ export const Return = (order) => {
       sessionStorage.clear();
     }
   }, [status]);
+
+  useEffect(() => {
+    if (window.fbq) {
+      window.fbq('track', 'Purchase', {
+        value: 36,
+        currency: 'USD',
+      });
+    }
+  }, []);
   
   if (status === 'open') {
     return (
