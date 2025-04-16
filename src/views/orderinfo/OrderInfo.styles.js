@@ -52,7 +52,7 @@ export const Input = styled.input`
   font-size: 16px;
   background-color: #fcfffd;
   border-radius: 4px;
-  font-weight: 100;
+  font-weight: 200;
 `
 export const TextArea = styled.textarea`
   width: 80%;

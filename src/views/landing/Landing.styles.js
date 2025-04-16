@@ -69,6 +69,7 @@ export const InfoSection = styled.div`
   align-items: center;
   justify-content: center;
   background-color: whitesmoke;
+  padding: 20px; 
 
   h1 {
     font-size: 3em;
