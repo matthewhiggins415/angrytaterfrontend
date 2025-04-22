@@ -16,8 +16,8 @@ const Landing = ({ user }) => {
     <>
       <LandingContainer>
         <HeroContainer>
-          {/* <HeroTag>Some people are <WordChanger words={wordArr}/> and they should know it.</HeroTag> */}
-          <HeroTag>Some messages are better sent on a potato</HeroTag>
+          <HeroTag>Some people are <WordChanger words={wordArr}/> and they should know it.</HeroTag>
+          {/* <HeroTag>Some messages are better sent on a potato</HeroTag> */}
         </HeroContainer>
         {/* <AnimatedButton onClick={() => navigate("/order")}>Customize your potato $20</AnimatedButton> */}
       </LandingContainer>
