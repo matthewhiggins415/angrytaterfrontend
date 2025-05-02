@@ -50,17 +50,49 @@ export const HeroContainer = styled.div`
 `
 
 export const HeroTag = styled.h1`
-  color: black;
-  font-size: 100px;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
-  /* border: 2px solid red; */
+  color: #6c63ff; /* Text color */
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.8),  /* Soft white glow */
+    0 0 10px rgba(255, 255, 255, 0.8), /* Stronger white glow */
+    0 0 20px rgba(255, 255, 255, 0.8), /* Even stronger glow */
+    0 0 30px rgba(255, 255, 255, 0.8), /* Full outline around text */
+    0 0 40px rgba(255, 255, 255, 0.8); /* Make it pop more */
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  display: inline-block;
+  
+  /* 3D Effect */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.2s ease;
+
+  animation: bounce 2s infinite ease-in-out;
+
+  /* Keyframe animation for bouncing effect */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(0deg); }
+    50% { transform: translateY(-20px) rotateX(10deg) rotateY(10deg); }
+  }
+
+  @keyframes squish {
+    0% { transform: scale(1) rotateX(0deg) rotateY(0deg); }
+    50% { transform: scale(1.1) rotateX(-5deg) rotateY(-5deg); }
+    100% { transform: scale(1) rotateX(0deg) rotateY(0deg); }
+  }
 
   @media (max-width: 768px) {
-    font-size: 3em;
-    width: 100%;
+    font-size: 3rem;
   }
-`
+
+  @media (max-width: 480px) {
+    font-size: 2.5rem;
+  }
+`;
+
 export const InfoSection = styled.div`
   width: 100%;
   min-height: 50vh;
