@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Form, Input, SectionContainer, TextArea, ImgContainer, SubmitBtn } from './OrderInfo.styles';
 import { useNavigate } from "react-router-dom";
+import Carousel from '../../components/carousel/Carousel';
 
 const OrderInfo = ({ user, setOrder }) => {
   const navigate = useNavigate();
@@ -118,6 +119,7 @@ const OrderInfo = ({ user, setOrder }) => {
         </SectionContainer>
         <SubmitBtn type="submit">Submit</SubmitBtn>
     </Form>
+    <Carousel />
   </Container>
   )
 }

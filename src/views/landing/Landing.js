@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { LandingContainer, HeroContainer, HeroTag, HeroBtn, InfoSection, ImgSection, ImgOne, ImgTwo, ImgThree, AnimatedButton, PotatoBoxSection, PotatoMemeSection, Span } from './Landing.styles';
 import WordChanger from '../../components/wordChanger/WordChanger';
 import { useNavigate } from "react-router-dom";
+import Carousel from '../../components/carousel/Carousel';
 
 const Landing = ({ user }) => {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ const Landing = ({ user }) => {
       </ImgSection>
       <InfoSection>
         <AnimatedButton onClick={() => navigate("/order")}>Customize your potato</AnimatedButton>
-        <PotatoMemeSection></PotatoMemeSection>
+        <Carousel />
       </InfoSection>
     </>
   )

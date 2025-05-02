@@ -224,15 +224,3 @@ export const PotatoBoxSection = styled.div`
   background-repeat: no-repeat;
   /* transform: translateY(-50px); Moves the section up by 20px */
 `;
-
-export const PotatoMemeSection = styled.div`
-  width: 100%;
-  min-height: 500px;
-  background-image: url(${potatomeme});
-  background-position: center;
-  background-repeat: no-repeat;
-`;
-
-export const Span = styled.span`
-  color: red;
-`
