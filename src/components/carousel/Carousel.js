@@ -3,27 +3,27 @@ import { P, CarouselContainer, Stars } from './Carousel.styles';
 
 const reviews = [
     {
-      message: "Sent one to my grandson for his 21st birthday. He laughed so hard he called me right away. Said it was the 'weirdest and best' gift he'd ever received. Who knew a potato could bring such joy!",
+      message: "Sent one to my grandson for his 21st birthday. He called me right away. Said it was the 'weirdest and best' gift he'd ever received!",
       author: "— Margaret"
     },
     {
-      message: "I sent one to my neighbor after her hip surgery that said ‘This spud’s rooting for you!’ She called me in tears from laughing. Way better than flowers!",
+      message: "I sent one to my neighbor after her hip surgery that said ‘This spud’s rooting for you!’ She called me laughing. Way better than flowers!",
       author: "— Henry"
     },
     {
-      message: "I sent one to my friend Edna that just said, ‘Call me, you old prune.’ She hasn’t stopped laughing.",
+      message: "I sent one to my friend Edna that just said, ‘Call me, you old prune.’ haha 😂",
       author: "— Joanne"
     },
     {
-      message: "Sent one to my little sister that just said ‘No thoughts, just tater.’ She gets it. Now it’s her emotional support potato.",
-      author: "— Grace"
+      message: "Sent one to my little sister as a graduation present ‘Congratulations.. Here's a potato’. Nailed it.",
+      author: "— Matt"
     },
     {
-      message: "Had one sent to my crush anonymously. It said ‘You a-peel to me.’ We’re dating now. Guess the potato worked??",
+      message: "My ex was annoying me so I sent a spite potato. Petty and funny haha",
       author: "— Sophie"
     },
     {
-      message: "I was broke but wanted to prank my best friend for her birthday. Spent $10 on a potato that said ‘You’re old now.’ Worth every cent.",
+      message: "Wasn't sure what to get my dad who has everything he wants already. Spent the money on a potato that said ‘You’re old now.’ Worth every cent.",
       author: "— Emily"
     }
   ];
