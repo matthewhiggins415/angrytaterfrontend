@@ -23,7 +23,7 @@ const Landing = ({ user }) => {
         {/* <AnimatedButton onClick={() => navigate("/order")}>Customize your potato $20</AnimatedButton> */}
       </LandingContainer>
       <InfoSection>
-        <AnimatedButton onClick={() => navigate("/order")}>Customize your potato</AnimatedButton>
+        <AnimatedButton onClick={() => navigate("/order")}>Customize your potato $11</AnimatedButton>
         <PotatoBoxSection></PotatoBoxSection>
         <h1>Any message you want delivered on a potato.</h1>
       </InfoSection>
@@ -33,7 +33,7 @@ const Landing = ({ user }) => {
         <ImgThree></ImgThree>
       </ImgSection>
       <InfoSection>
-        <AnimatedButton onClick={() => navigate("/order")}>Customize your potato</AnimatedButton>
+        <AnimatedButton onClick={() => navigate("/order")}>Customize your potato $11</AnimatedButton>
         <Carousel />
       </InfoSection>
     </>
