@@ -34,7 +34,7 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % reviews.length);
-    }, 4500); // 2.5 seconds
+    }, 6500); // 2.5 seconds
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
