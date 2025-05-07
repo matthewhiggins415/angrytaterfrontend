@@ -43,18 +43,39 @@ export const Return = (order) => {
 
       createTheOrder(orderInfo);
 
+      // ✅ GA4 purchase event
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          event: "purchase",
+          ecommerce: {
+            transaction_id: sessionId || "unknown_txn",
+            value: 20 || 0,
+            currency: "USD",
+            items: [
+              {
+                item_id: updatedOrderInfo.sku || "potato_sku",
+                item_name: updatedOrderInfo.message || "Custom Potato",
+                price: 20,
+                quantity: 1,
+              },
+            ],
+          },
+        });
+      }
+
       sessionStorage.clear();
     }
   }, [status]);
 
   useEffect(() => {
-    if (window.fbq) {
-      window.fbq('track', 'Purchase', {
-        value: 36,
-        currency: 'USD',
-      });
-    }
-  }, []);
+  if (status === 'complete' && window.fbq) {
+    window.fbq('track', 'Purchase', {
+      value: 20, // You could dynamically insert the actual order value
+      currency: 'USD',
+    });
+  }
+}, [status]);
+
   
   if (status === 'open') {
     return (
@@ -65,8 +86,8 @@ export const Return = (order) => {
   if (status === 'complete') {
     return (
       <ReturnSection id="success">
-        <p>Thank you for your business and unwavering spite.</p> 
-        <p>Upon sending your potato a confirmation email will be sent to {customerEmail}.</p>
+        <p>Thank you for your business!</p> <br/>
+        <p>Upon sending your potato a confirmation email will be sent to {customerEmail}.</p> <br/>
         <p>If you have any questions, please email <a href="mailto:angrytaters@gmail.com">angrytaters@gmail.com</a>.</p>
         <a>{order.recipient_business_name}</a>
         <HomeBtn onClick={() => navigate("/")}>back to home</HomeBtn>
